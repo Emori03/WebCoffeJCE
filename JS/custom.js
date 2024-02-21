@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    // Cargar el contenido HTML de un archivo externo
+    $('#contenido').load('./Modulos/Principal.html');
+});
 // to get current year
 function getYear() {
     var currentDate = new Date();
