@@ -1005,3 +1005,11 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.dropdown-menu {
+  background-color: #ffbe33;
+}
+.dropdown-menu form input[type="text"],
+.dropdown-menu form input[type="password"] {
+  min-width: 40vh;
+}

@@ -21,13 +21,6 @@
   <!-- boostrap core icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
-    crossorigin="anonymous" />
   <!-- font awesome style -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" rel="stylesheet" />
 
@@ -65,9 +58,8 @@
                 <a href="#" class="user_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi bi-person"></i>
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#login">Ingresar</a></li>
-                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#register">Registrarse</a></li>
+                <ul class="dropdown-menu px-2" id="usuarioMenu">
+                  
                 </ul>
               </div>
               <a href="" class="order_online">Ordena online</a>
@@ -206,89 +198,8 @@
   </footer>
   <!-- footer section -->
 
-  <!-- Modal Ingreso -->
-  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content bg-warning">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalLabel">Ingreso</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-white">
-          <form action="#" method="post">
-            <div class="mb-3">
-              <label for="usuario" class="form-label">Usuario:</label>
-              <input type="email" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario">
-            </div>
-            <div class="mb-3">
-              <label for="contrasena" class="form-label">Contraseña:</label>
-              <input type="password" name="contrasena" id="contrasena" class="form-control" placeholder="Ingresa tu contraseña">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Ingresar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Registro -->
-  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content bg-warning">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalLabel">Registro</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-white">
-          <form action="#" method="post">
-            <div class="mb-3">
-              <label for="usuario" class="form-label">Usuario:</label>
-              <input type="email" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario">
-            </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo:</label>
-              <input type="password" name="correo" id="correo" class="form-control" placeholder="Ingresa tu correo electronico">
-            </div>
-            <div class="mb-3">
-              <label for="telefono" class="form-label">Telefono:</label>
-              <input type="password" name="telefono" id="telefono" class="form-control" placeholder="Ingresa tu contraseña">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Genero:</label>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="generoHombre" value="option1">
-                <label class="form-check-label" for="generoHombre">Hombre</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="generoMujer" value="option2">
-                <label class="form-check-label" for="generoMujer">Mujer</label>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="contrasena" class="form-label">Contraseña:</label>
-              <input type="password" name="contrasena" id="contrasena" class="form-control" placeholder="Ingresa tu contraseña">
-              <span id="passwordHelpInline" class="form-text">
-                Contraseña de almenos 6-20 caracteres
-              </span>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Ingresar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- jQery -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
   <!-- bootstrap js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
@@ -297,19 +208,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  ç <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
   <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
   <!-- custom js -->
   <script src="JS/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
 </body>
 
