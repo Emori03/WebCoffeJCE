@@ -59,3 +59,21 @@ function getMenu(modulo, callback) {
         }
     });
 }
+
+function ingreso() {
+    $.ajax({
+        url: 'archivo_destino.php',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            clave1: 'valor1',
+            clave2: 'valor2'
+        }),
+        success: function(response) {
+            console.log('Respuesta del servidor:', response);
+        },
+        error: function(xhr, status, error) {
+            console.error('Error en la solicitud:', error);
+        }
+    });
+}
