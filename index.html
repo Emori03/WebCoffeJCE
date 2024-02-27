@@ -16,17 +16,15 @@
   <title> JEC Coffee </title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css"
-    href="./CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
   <!-- boostrap core icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./CSS/bootstrap-icons.min.css">
   <!-- font awesome style -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="./CSS/fontawesome.min.css"/>
   <!-- Custom styles for this template -->
-  <link href="CSS/style.css" rel="stylesheet" />
+  <link href="./CSS/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="CSS/responsive.css" rel="stylesheet" />
+  <link href="./CSS/responsive.css" rel="stylesheet" />
 
 </head>
 
@@ -47,9 +45,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Tabs -->
-            <ul class="navbar-nav  mx-auto ">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Principal<span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" onclick="modulo('Principal')">Principal</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="modulo('Menu')">Menu</a></li>
             </ul>
             <!-- Opciones -->
             <div class="user_option">
@@ -198,17 +196,12 @@
   <!-- footer section -->
 
   <!-- jQery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+  <script src="./JS/jquery.min.js"></script>
   <!-- bootstrap js -->
-  <script src="./JS/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-  <script src="./JS/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <script src="./JS/bootstrap.min.js"></script>
+  <script src="./JS/bootstrap.bundle.min.js"></script>
   <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="./JS/isotope.pkgd.min.js"></script>
   <!-- custom js -->
   <script src="JS/custom.js"></script>
 
