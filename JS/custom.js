@@ -7,6 +7,14 @@ $(document).ready(function () {
 
 function modulo(modulo) {
     $('#contenido').load('./Modulos/' + modulo + '.html', function () {
+        if (modulo == "Menu") {
+            var carrusel = document.getElementsByClassName("slider_section");
+            $(carrusel).addClass("d-none");
+        } else if (modulo == "Principal") {
+            var carrusel = document.getElementsByClassName("slider_section");
+            $(carrusel).removeClass("d-none");
+        }
+
         $('.filters_menu li').click(function () {
             $('.filters_menu li').removeClass('active');
             $(this).addClass('active');
