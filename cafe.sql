@@ -62,7 +62,6 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`ProductoId`, `Nombre`, `Descripcion`, `Precio`) VALUES
-(1, 'Americano', 'Es un derivado del café expreso, aunque con una cantidad más alta de agua. Como resultado, se obtiene una bebida menos potente en cuanto a cafeína y con un sabor menos amargo y más dulce.', 23.32),
 (2, 'Americano', 'Es un derivado del café expreso, aunque con una cantidad más alta de agua. Como resultado, se obtiene una bebida menos potente en cuanto a cafeína y con un sabor menos amargo y más dulce.', 26.98),
 (3, 'Capuchino', 'Es muy similar al café con leche, aunque con ligeros matices que hacen de este tipo de bebida una delicia. Un cappuccino se prepara con un café espresso y partes iguales de leche y crema o espuma de leche.', 28.36),
 (4, 'Mocca', 'Se utiliza chocolate ya sea en forma de sirope. El café mocca parte de la elaboración tradicional del café con leche, rematando la preparación con ese sabor dulce.', 28.63),

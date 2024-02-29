@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
   <!-- boostrap core icons -->
   <link rel="stylesheet" href="./CSS/bootstrap-icons.min.css">
-  <!-- font awesome style -->
+  <!-- Font awesome style -->
   <link rel="stylesheet" href="./CSS/fontawesome.min.css"/>
   <!-- Custom styles for this template -->
   <link href="./CSS/style.css" rel="stylesheet" />
@@ -59,8 +59,9 @@
                   
                 </ul>
               </div>
-              <a href="" class="order_online">Ordena online</a>
+              <button class="order_online" data-toggle="modal" data-target="#paymentModal" >Ordena online</button>
             </div>
+
           </div>
         </nav>
       </div>
@@ -195,7 +196,7 @@
   </footer>
   <!-- footer section -->
 
-  <!-- jQery -->
+    <!-- jQery -->
   <script src="./JS/jquery.min.js"></script>
   <!-- bootstrap js -->
   <script src="./JS/bootstrap.min.js"></script>
@@ -205,6 +206,15 @@
   <script src="./JS/isotope.pkgd.min.js"></script>
   <!-- custom js -->
   <script src="./JS/custom.js"></script>
+
+  <!-- Script adicional para abrir el modal -->
+  <script>
+    $(document).ready(function() {
+      $('.order_online').click(function() {
+        $('#contenido').load('Modulos/ordena.html'); // Ruta al archivo ordena.html dentro de la carpeta Modulos
+      });
+    });
+  </script>
 
 </body>
 
