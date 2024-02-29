@@ -68,7 +68,7 @@
 
                 </ul>
               </div>
-              <button type="button" class="order_online" data-bs-toggle="modal" data-bs-target="#paymentModal">Ordena online</button>
+              <button type="button" class="order_online" data-bs-toggle="modal" data-bs-target="#paymentModal" onclick="lamagiadelmodal()">Ordena online</button>
             </div>
 
           </div>
@@ -209,12 +209,12 @@
   <!-- Modal de orden -->
   <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content bg-warning">
+        <div class="modal-header border-bottom-0">
           <h5 class="modal-title" id="paymentModalLabel">Seleccionar Método de Pago</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="background-color: #ffbe33;"> 
+        <div class="modal-body"> 
           <div class="btn-group-vertical w-100" role="group">
             <button type="button" class="btn btn-outline-success text-black" onclick="selectPaymentMethod('paypal')">PayPal</button> <br>
             <button type="button" class="btn btn-outline-success text-black" onclick="selectPaymentMethod('credit_card')">Tarjeta de Crédito</button>
@@ -225,6 +225,17 @@
     </div>
   </div>
   <!-- Modal de orden -->
+
+    <!-- Modal de producto -->
+    <div class="modal fade" id="moproducto" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-warning">
+          <div class="modal-body" id="productombody"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal de producto -->
 
   <!-- jQery -->
   <script src="./JS/jquery.min.js"></script>
