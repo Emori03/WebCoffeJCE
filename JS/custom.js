@@ -1,8 +1,12 @@
 $(document).ready(function () {
+    setTimeout(function() {
+        $('.pantalla-carga').fadeOut();
+      }, 2000);
     menu("Ingreso");
 
     // Cargar el contenido HTML de un archivo externo
     modulo("Principal");
+    
 });
 
 function modulo(modulo) {
@@ -16,10 +20,12 @@ function modulo(modulo) {
         }
 
         $('.filters_menu li').click(function () {
+            console.log("dio click")
             $('.filters_menu li').removeClass('active');
             $(this).addClass('active');
 
             var data = $(this).attr('data-filter');
+            console.log(data)
             $grid.isotope({
                 filter: data
             })
@@ -46,7 +52,6 @@ getYear();
 
 function menu(modulo) {
     $('#usuarioMenu').load('./Modulos/' + modulo + '.html', function () {
-        console.log("Ya cargo el menu");
     });
 }
 

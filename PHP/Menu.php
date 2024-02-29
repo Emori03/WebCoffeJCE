@@ -3,7 +3,7 @@ require_once 'Conexion.php';
 session_start();
 
 try {
-    $menu = $conexion->prepare("SELECT ProductoId, Nombre, Descripcion, Precio FROM productos");
+    $menu = $conexion->prepare("SELECT ProductoId, Nombre, Descripcion, Precio, Tipo FROM productos");
     $menu->execute();
     $datos = $menu->fetchAll(PDO::FETCH_ASSOC);
 
