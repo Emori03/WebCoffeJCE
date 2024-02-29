@@ -6,15 +6,15 @@
       </h2>
     </div>
 
-    <ul class="filters_menu">
-      <li class="active" data-filter="*">Todo</li>
-      <li data-filter=".caffe">Cafés</li>
-      <li data-filter=".postres">Postres</li>
-      <li data-filter=".bebidas">Bebidas</li>
-      <li data-filter=".maridajes">Maridajes</li>
+    <ul class="filters_menu d-flex flex-row justify-content-center">
+      <li class="list-group btn btn-dark m-1 px-1 active" data-filter="*">Todo</li>
+      <li class="list-group btn btn-dark m-1 px-1" data-filter=".caffe">Cafés</li>
+      <li class="list-group btn btn-dark m-1 px-1" data-filter=".postres">Postres</li>
+      <li class="list-group btn btn-dark m-1 px-1" data-filter=".bebidas">Bebidas</li>
+      <li class="list-group btn btn-dark m-1 px-1" data-filter=".maridajes">Maridajes</li>
     </ul>
 
-    <div class="filters-content" id="menuDiv"></div>
+    <div class="filters-content grid" id="menuDiv"></div>
   </div>
 </section>
 <script src="./JS/Menu.js"></script>

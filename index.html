@@ -20,7 +20,7 @@
   <!-- boostrap core icons -->
   <link rel="stylesheet" href="./CSS/bootstrap-icons.min.css">
   <!-- Font awesome style -->
-  <link rel="stylesheet" href="./CSS/fontawesome.min.css"/>
+  <link rel="stylesheet" href="./CSS/fontawesome.min.css" />
   <!-- Custom styles for this template -->
   <link href="./CSS/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -47,7 +47,8 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html"><span>JEC Café</span></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -59,14 +60,15 @@
             <!-- Opciones -->
             <div class="user_option">
               <div class="dropdown">
-                <a href="#" class="user_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#" class="user_link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-person"></i>
                 </a>
                 <ul class="dropdown-menu px-2" id="usuarioMenu">
-                  
+
                 </ul>
               </div>
-              <button class="order_online" data-toggle="modal" data-target="#paymentModal" >Ordena online</button>
+              <button type="button" class="order_online" data-bs-toggle="modal" data-bs-target="#paymentModal">Ordena online</button>
             </div>
 
           </div>
@@ -137,7 +139,8 @@
         </div>
         <div class="container">
           <ol class="carousel-indicators">
-            <li data-bs-target="#principalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+            <li data-bs-target="#principalCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></li>
             <li data-bs-target="#principalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></li>
             <li data-bs-target="#principalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></li>
           </ol>
@@ -158,15 +161,15 @@
             <h4>Contactanos</h4>
             <div class="contact_link_box">
               <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <i class="bi bi-geo-alt-fill"></i>
                 <span>Mesa de Lourdes</span>
               </a>
               <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
+                <i class="bi bi-phone"></i>
                 <span>Llama a 844-000-0000</span>
               </a>
               <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="bi bi-envelope-fill"></i>
                 <span>JECCafe@gmail.com</span>
               </a>
             </div>
@@ -177,11 +180,11 @@
             <a href="" class="footer-logo">JEC Café</a>
             <p>Enfocados en tu satisfaccion y comodidad</p>
             <div class="footer_social">
-              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-pinterest"></i></i></a>
             </div>
           </div>
         </div>
@@ -203,7 +206,27 @@
   </footer>
   <!-- footer section -->
 
-    <!-- jQery -->
+  <!-- Modal de orden -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="paymentModalLabel">Seleccionar Método de Pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: #ffbe33;"> 
+          <div class="btn-group-vertical w-100" role="group">
+            <button type="button" class="btn btn-outline-success text-black" onclick="selectPaymentMethod('paypal')">PayPal</button> <br>
+            <button type="button" class="btn btn-outline-success text-black" onclick="selectPaymentMethod('credit_card')">Tarjeta de Crédito</button>
+          </div>
+          <div id="paymentForm"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de orden -->
+
+  <!-- jQery -->
   <script src="./JS/jquery.min.js"></script>
   <!-- bootstrap js -->
   <script src="./JS/bootstrap.min.js"></script>
@@ -213,16 +236,6 @@
   <script src="./JS/isotope.pkgd.min.js"></script>
   <!-- custom js -->
   <script src="./JS/custom.js"></script>
-
-  <!-- Script adicional para abrir el modal -->
-  <script>
-    $(document).ready(function() {
-      $('.order_online').click(function() {
-        $('#contenido').load('Modulos/ordena.html'); // Ruta al archivo ordena.html dentro de la carpeta Modulos
-      });
-    });
-  </script>
-
 </body>
 
 </html>
