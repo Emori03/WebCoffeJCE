@@ -119,3 +119,99 @@ function cargarProductos(noesmenu) {
         throw error;
     }
 }
+function idToModal(Producto) {
+    var ProductoId = Producto.id;
+    console.log(ProductoId);
+    console.log(productos);
+    for(let i = 0; i < productos.length; i++){
+        if(productos[i].ProductoId == ProductoId){
+            console.log(productos[i]);
+            var ModalContent = document.getElementById("productoMBody");
+            ModalContent.innerHTML = "";
+
+            var ModalHeader = document.createElement("div");
+            ModalHeader.classList.add("modal-header", "border-bottom-0");
+
+            var hNombre = document.createElement("h5");
+            hNombre.className = "modal-title";
+            hNombre.textContent = productos[i].Nombre;
+            ModalHeader.appendChild(hNombre);
+
+            var btnClose = document.createElement("button");
+            btnClose.className = "btn-close";
+            btnClose.setAttribute("data-bs-dismiss", "modal");
+            btnClose.setAttribute("aria-label", "Close");
+            ModalHeader.appendChild(btnClose);
+
+            ModalContent.appendChild(ModalHeader);
+
+            var ModalBody = document.createElement("div");
+            ModalBody.className = "modal-body";
+
+            var pDescripcion = document.createElement("p");
+            pDescripcion.textContent = productos[i].Descripcion;
+            ModalBody.appendChild(pDescripcion);
+
+            ModalContent.appendChild(ModalBody);
+
+            var ModalFooter = document.createElement("div");
+            ModalFooter.classList.add("modal-footer", "border-top-0");
+
+            var divInput = document.createElement("div");
+            divInput.classList.add("input-group", "w-50");
+
+            var btnDecremento = document.createElement("button");
+            btnDecremento.classList.add("btn", "btn-secondary");
+            btnDecremento.textContent = "-";
+            btnDecremento.onclick = function() {
+                decrementar();
+            };
+            divInput.appendChild(btnDecremento);
+
+            var InputCantidad = document.createElement("input");
+            InputCantidad.className = "form-control";
+            InputCantidad.type = "number";
+            InputCantidad.disabled = true;
+            InputCantidad.value = 1;
+            InputCantidad.id = "cantidad";
+            divInput.appendChild(InputCantidad);
+
+            var btnIncremento = document.createElement("button");
+            btnIncremento.classList.add("btn", "btn-secondary");
+            btnIncremento.textContent = "+";
+            btnIncremento.onclick = function() {
+                incrementar();
+            };
+            divInput.appendChild(btnIncremento);
+
+            ModalFooter.appendChild(divInput);
+
+            var btnCart = document.createElement("buttom");
+            btnCart.classList.add("btn", "btn-success");
+
+            var iCart = document.createElement("i");
+            iCart.classList.add("bi", "bi-cart-fill");
+            btnCart.appendChild(iCart);
+
+            ModalFooter.appendChild(btnCart);
+
+            ModalContent.appendChild(ModalFooter);
+
+            break;
+        }
+    }
+}
+
+function incrementar() {
+    var valor = document.getElementById("cantidad").value;
+    valor++;
+    document.getElementById("cantidad").value = valor;
+}
+
+function decrementar() {
+    var valor = document.getElementById("cantidad").value;
+    if (valor > 1) {
+        valor--;
+        document.getElementById("cantidad").value = valor;
+    }
+}
