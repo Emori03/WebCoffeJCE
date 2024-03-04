@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2024 a las 16:15:29
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Tiempo de generación: 04-03-2024 a las 20:05:14
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -90,7 +90,15 @@ INSERT INTO `productos` (`ProductoId`, `Nombre`, `Descripcion`, `Precio`, `Tipo`
 (26, 'Té', 'Te caliente de mansanilla', 26.39, 'bebidas'),
 (27, 'Pan tostado', 'Pan de la marca del gobierno cubano tostado', 20.19, 'maridajes'),
 (28, 'Ensalada', 'Los ingredientes lechuga, tomate, adereso de elccion, queso cabra, y una proteina a elecion', 40.47, 'maridajes'),
-(29, 'Arte Coffe', 'Le diseñamos un arete o diseño a tu cafe', 120.60, 'maridajes');
+(29, 'Arte Coffe', 'Le diseñamos un arete o diseño a tu cafe', 120.60, 'maridajes'),
+(31, 'Osilletas', 'Deliciosas y crujientes galletas de mantequilla en forma de osito', 12.60, 'maridajes'),
+(32, 'Fresas con crema y nutella', 'Deliciosas Fresas con crema de chantillí y un toque de nuestra deliciosa avellana de chocolate (Nutella) ', 60.00, 'maridajes'),
+(33, 'Mixed berry tart', 'Tarta de frutos rojos', 55.00, 'maridajes'),
+(34, 'Frapuccino Unicornio', 'Bebida con decoración de unicornio', 80.00, 'postres'),
+(35, 'Café Frío', 'Café frio con decoración', 120.00, 'bebidas'),
+(36, 'Malteada', 'Malteada de fresa, chocolate y galleta', 55.00, 'postres'),
+(37, 'Jugos Naturales', 'Bebida natural con variedad de sabores', 25.00, 'bebidas'),
+(38, 'Bebida Rosa', 'Bebida rosa de 500ml', 62.50, 'bebidas');
 
 -- --------------------------------------------------------
 
@@ -191,7 +199,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ProductoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `ProductoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `relacionalpedido`
